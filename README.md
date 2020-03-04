@@ -31,6 +31,7 @@ $ source train_pg_pact.sh
 ##### Specify the Flags
 
 Make sure to tune the training parameters in to achieve a good model prediction accuracy.
+```sh
   - -w : bitwidth of weights (floating-point if set to 0)
   - -a : bitwidth of activations (floating-point if set to 0)
   - -pact : use parameterized clipping for activatons
@@ -39,6 +40,7 @@ Make sure to tune the training parameters in to achieve a good model prediction 
   - -gtar : the gating target
   - -sg : the penalty factor on the gating loss
   - -spbp : use sparse back-prop
+  ```
 
 ## Channel Gating (CG)
 
@@ -68,6 +70,7 @@ $ source train_cg_postact.sh
 ##### Specify the Flags
 
 The training parameters can be tuned to achieve different FLOP reduction and model accuracy.
+```sh
   - -lr : initial learning rate
   - -wd: weigth decaying factor
   - -pt: use 1/pt fraction of channels for prediction
@@ -77,6 +80,7 @@ The training parameters can be tuned to achieve different FLOP reduction and mod
   - -group: use group conv in the base path
   - -cg : use CG
   - -postact: use post-activated ResNet
+```
 
 ## Apply PG/CG to Your Own Models & Datasets
 
