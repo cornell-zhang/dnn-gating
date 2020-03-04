@@ -94,6 +94,7 @@ If you prepare your own training scripts, remember to add the **gating loss** to
 
 ### Citation
 If you use CG or PG in your research, please cite our NeurIPS'19 and ICLR'20 papers.
+
 **Channel Gating Neural Networks**
 ```
 
