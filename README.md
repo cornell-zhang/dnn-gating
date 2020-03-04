@@ -31,16 +31,16 @@ $ source train_pg_pact.sh
 ##### Specify the Flags
 
 Make sure to tune the training parameters in to achieve a good model prediction accuracy.
-```sh
-  - -w : bitwidth of weights (floating-point if set to 0)
-  - -a : bitwidth of activations (floating-point if set to 0)
-  - -pact : use parameterized clipping for activatons
-  - -pg : use PG
-  - -pb : prediction bitwidth (only valid if -pg is turned on, and the bitwidth of prediction must smaller than that of activations)
-  - -gtar : the gating target
-  - -sg : the penalty factor on the gating loss
-  - -spbp : use sparse back-prop
-  ```
+```
+  -w : bitwidth of weights (floating-point if set to 0)
+  -a : bitwidth of activations (floating-point if set to 0)
+  -pact : use parameterized clipping for activatons
+  -pg : use PG
+  -pb : prediction bitwidth (only valid if -pg is turned on, and the bitwidth of prediction must smaller than that of activations)
+  -gtar : the gating target
+  -sg : the penalty factor on the gating loss
+  -spbp : use sparse back-prop
+```
 
 ## Channel Gating (CG)
 
@@ -70,16 +70,16 @@ $ source train_cg_postact.sh
 ##### Specify the Flags
 
 The training parameters can be tuned to achieve different FLOP reduction and model accuracy.
-```sh
-  - -lr : initial learning rate
-  - -wd: weigth decaying factor
-  - -pt: use 1/pt fraction of channels for prediction
-  - -gi: the intital value of gating thresholds
-  - -gtar: the target value of gating thresholds
-  - -spbp : use sparse back-prop
-  - -group: use group conv in the base path
-  - -cg : use CG
-  - -postact: use post-activated ResNet
+```
+  -lr : initial learning rate
+  -wd: weigth decaying factor
+  -pt: use 1/pt fraction of channels for prediction
+  -gi: the intital value of gating thresholds
+  -gtar: the target value of gating thresholds
+  -spbp : use sparse back-prop
+  -group: use group conv in the base path
+  -cg : use CG
+  -postact: use post-activated ResNet
 ```
 
 ## Apply PG/CG to Your Own Models & Datasets
